@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_layout)
 
-        toolbar = findViewById<Toolbar>(R.id.toolbar)
+        toolbar = findViewById(R.id.toolbar)
 
         setupTabs()
     }
@@ -27,9 +27,11 @@ class MainActivity : AppCompatActivity() {
     private fun setupTabs() {
         val tabLayout = findViewById<TabLayout>(R.id.tab_layout)
 
-        tabLayout.addTab(tabLayout.newTab().setText("Town"))
+        // Bus stops for the station and outside work
+        tabLayout.addTab(tabLayout.newTab().setText("Station"))
         tabLayout.addTab(tabLayout.newTab().setText("Work"))
 
+        // Additional bus stops in town and lenton
         tabLayout.addTab(tabLayout.newTab().setText("i4"))
         tabLayout.addTab(tabLayout.newTab().setText("indigo"))
         tabLayout.addTab(tabLayout.newTab().setText("Lenton"))
